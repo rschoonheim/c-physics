@@ -16,10 +16,12 @@ libm = c_compiler.find_library('m', required : false)
 
 
 c_physics = executable(
-        'c_physics',
-        'main.c',
-        install : true,
-        dependencies : [open_gl, glfw, glu, libm],
+    'c_physics',
+    'main.c',
+    'modules/open_gl/open_gl.h',
+    'modules/open_gl/open_gl.c',
+    install : true,
+    dependencies : [open_gl, glfw, glu, libm],
 )
 
 test('test', c_physics)
