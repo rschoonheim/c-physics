@@ -20,6 +20,8 @@ c_physics = executable(
     'main.c',
     'modules/open_gl/open_gl.h',
     'modules/open_gl/open_gl.c',
+    'modules/mesh_grid/mesh_grid.h',
+    'modules/mesh_grid/mesh_grid.c',
     install : true,
     dependencies : [open_gl, glfw, glu, libm],
 )
